@@ -8,8 +8,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
-import cn.sina.api.commons.cache.CasValue;
 import cn.sina.api.commons.cache.MemcacheClient;
+import cn.vika.memcached.CasValue;
 
 /**
  * @author yuanming@staff.sina.com.cn
@@ -18,7 +18,7 @@ import cn.sina.api.commons.cache.MemcacheClient;
  * a mock MemcacheClient implement. 
  *
  */
-public class MockClient implements MemcacheClient {
+public class MockMemcacheClient implements MemcacheClient {
 	
 	Map<String,Object> map = new HashMap<String,Object>();
 	

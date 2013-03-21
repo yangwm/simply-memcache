@@ -3,6 +3,8 @@ package cn.sina.api.commons.cache;
 import java.util.Date;
 import java.util.Map;
 
+import cn.vika.memcached.CasValue;
+
 
 public interface MemcacheClient {
 	public void setServerPort(String serverPort);

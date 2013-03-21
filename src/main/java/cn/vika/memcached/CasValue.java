@@ -1,4 +1,4 @@
-package cn.sina.api.commons.cache;
+package cn.vika.memcached;
 
 /**
  * cas value for memcache 

@@ -11,9 +11,9 @@ import java.util.Map;
 import org.junit.Assert;
 import org.junit.Test;
 
-import cn.sina.api.commons.cache.CasValue;
 import cn.sina.api.commons.cache.MemcacheClient;
-import cn.sina.api.commons.cache.driver.MockClient;
+import cn.sina.api.commons.cache.driver.MockMemcacheClient;
+import cn.vika.memcached.CasValue;
 
 
 /**
@@ -165,13 +165,13 @@ public class MemCacheTemplateTest {
     }
     
     private MemCacheTemplate<String> getMemCacheTemplate() {
-        MockClient memcacheClientMaster = new MockClient();
+        MockMemcacheClient memcacheClientMaster = new MockMemcacheClient();
         memcacheClientMaster.setMinSpareConnections(2);
         memcacheClientMaster.setMaxSpareConnections(15);
         memcacheClientMaster.setServerPort("testmc:11211"); // testmcmaster
         memcacheClientMaster.init();
         
-        MockClient memcacheClientMasterL1 = new MockClient();
+        MockMemcacheClient memcacheClientMasterL1 = new MockMemcacheClient();
         memcacheClientMasterL1.setMinSpareConnections(2);
         memcacheClientMasterL1.setMaxSpareConnections(15);
         memcacheClientMasterL1.setServerPort("testmc:11211"); // testmcmasterL1
@@ -179,7 +179,7 @@ public class MemCacheTemplateTest {
         List<MemcacheClient> masterL1List = new ArrayList<MemcacheClient>();
         masterL1List.add(memcacheClientMasterL1);
         
-        MockClient memcacheClientSlave = new MockClient();
+        MockMemcacheClient memcacheClientSlave = new MockMemcacheClient();
         memcacheClientSlave.setMinSpareConnections(2);
         memcacheClientSlave.setMaxSpareConnections(15);
         memcacheClientSlave.setServerPort("testmc:11211"); // testmcslave

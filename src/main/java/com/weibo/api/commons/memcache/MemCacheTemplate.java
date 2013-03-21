@@ -10,9 +10,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import cn.sina.api.commons.cache.CasValue;
 import cn.sina.api.commons.cache.MemcacheClient;
 import cn.sina.api.commons.util.ApiLogger;
+import cn.vika.memcached.CasValue;
 
 /**
  * <b> To get MemCacheTemplate from m-s memcache. </b>

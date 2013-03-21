@@ -6,7 +6,7 @@ package com.weibo.api.commons.memcache;
 import java.util.Date;
 import java.util.Map;
 
-import cn.sina.api.commons.cache.CasValue;
+import cn.vika.memcached.CasValue;
 
 /**
  * 
