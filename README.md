@@ -1,6 +1,4 @@
 simply-memcache
 ===============
 
-simply memcache client proxy 
-
-test
+simply memcache client proxy
